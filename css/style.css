@@ -1,0 +1,169 @@
+/*Global config*/
+
+:root {
+	--shop-black-color: #000;
+	--shop-black-focus: #00000050;
+	--shop-black-hover: #00000025;
+	--shop-black-shadow: #00000015;
+	--shop-gray-1-color: #faf9f8;
+	--shop-gray-2-color: #6b7177;
+	--shop-gray-3-color: #42474c;
+	--shop-gray-4-color: #212326;
+	--shop-gray-hr: #d2d5d9;
+	--shop-green-1-color: #008060;
+	--shop-green-1-focus: #00806050;
+	--shop-green-2-color: #004c3f;
+	--shop-green-3-color: #002e25;
+	--shop-white-color: #fff;
+}
+
+html, body {
+	background-color: var(--shop-white-color);
+	font-family: Helvetica, Arial, sans-serif;
+	margin: auto;
+	width: 83.3333333333333%;
+}
+
+/*Header and main first part*/
+
+.shopstyle {
+	background-color: var(--shop-green-1-color);
+	color: var(--shop-white-color);
+	text-align: center;
+}
+
+button, input {
+	border-width: 1.0px;
+	border-radius: 7.0px;
+	box-shadow: 0.0px 5.0px 15.0px 0.0px var(--shop-black-shadow);
+	font-size: 1.2rem;
+	padding: 15.0px 15.0px 15.0px 15.0px;
+}
+
+button:hover {
+	box-shadow: 0.0px 5.0px 25.0px 0.0px var(--shop-black-hover);
+}
+
+input:focus {
+	border-color: var(--shop-green-1-color);
+}
+
+.shopstyle button {
+	background-color: var(--shop-gray-4-color);
+	border-color: var(--shop-gray-4-color);
+	color: var(--shop-white-color);
+}
+
+.shopstyle button:hover {
+	background-color: var(--shop-black-color);
+}
+
+.shopstyle button:focus {
+	background-color: var(--shop-black-color);
+	box-shadow: 0.0px 0.0px 0.1875em 0.1875em var(--shop-black-focus);
+}
+
+/*Green to white transition*/
+
+.transition {
+	display: float;
+	float: none;
+	height: 100px;
+}
+
+/*Sponsor*/
+
+.flexgrid {
+	display: flex;
+	justify-content: space-between;
+}
+
+hr {
+	border: thin solid var(--shop-gray-hr);
+}
+
+.gridgrid {
+	color: var(--shop-black-color);
+	display: grid;
+	grid-template-columns: repeat(9, 1fr);
+	justify-items: space-between;
+	text-align: center;
+	font-size: 3.0rem;
+}
+
+.stdbtn {
+	background-color: var(--shop-green-1-color);
+	border-color: var(--shop-green-1-color);
+	color: var(--shop-white-color);
+}
+
+.stdbtn:focus {
+	background-color: var(--shop-green-2-color);
+	box-shadow: 0.0px 0.0px 0.1875em 0.1875em var(--shop-green-1-focus);
+}
+
+.stdbtn:hover {
+	background-color: var(--shop-green-2-color);
+}
+
+/*FAQs*/
+
+.faqstyle {
+	background-color: var(--shop-gray-1-color);
+}
+
+input.checkdetails {
+	position: absolute;
+	opacity: 0;
+	z-index: -1;
+}
+
+summary {
+	color: var(--shop-gray-4-color);
+	list-style: none;
+}
+
+.faqsummary {
+	align-items: center;
+	color: var(--shop-gray-4-color);
+	display: flex;
+	cursor: pointer;
+	font-size: 1.2rem;
+	justify-content: space-between;
+	user-select: none;
+}
+
+.faqsummary:after {
+	content: '\002b';
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+.faqdescription {
+	color: var(--shop-gray-2-color);
+	display: none;
+}
+
+input.checkdetails:checked + .faqsummary:after {
+	content: '\2212';
+	text-align: center;
+}
+input.checkdetails:checked ~ .faqdescription {
+	display: block;
+}
+
+/*Footer*/
+
+footer {
+	padding-top: 1.0rem;
+	text-align: right;
+}
+
+a {
+	color: var(--shop-green-1-color);
+	text-decoration: none;
+	padding-left: 10.0px;
+	padding-right: 10.0px;
+}
+
+/*End*/
